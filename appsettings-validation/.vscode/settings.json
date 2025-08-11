@@ -1,0 +1,11 @@
+{
+	"json.schemas": [
+		{
+			"fileMatch": [
+				"/appsettings.json",
+				"/appsettings.*.json"
+			],
+			"url": "./my-web-app/MyServiceSettings.schema.json"
+		}
+	]
+}

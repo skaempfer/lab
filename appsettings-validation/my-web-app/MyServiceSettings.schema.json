@@ -1,0 +1,49 @@
+{
+	"$schema": "http://json-schema.org/draft-06/schema#",
+	"type": "object",
+	"additionalProperties": true,
+	"properties": {
+		"MyServiceSettings": {
+			"$ref": "#/definitions/MyServiceSettings"
+		}
+	},
+	"definitions": {
+		"MyServiceSettings": {
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"maximumRetries": {
+					"type": "integer"
+				},
+				"knownUsers": {
+					"type": "array",
+					"items": {
+						"type": "string"
+					}
+				},
+				"nestedSettings": {
+					"$ref": "#/definitions/NestedSettings"
+				}
+			},
+			"required": [
+				"knownUsers",
+				"maximumRetries",
+				"nestedSettings"
+			],
+			"title": "MyServiceSettings"
+		},
+		"NestedSettings": {
+			"type": "object",
+			"additionalProperties": false,
+			"properties": {
+				"configuredHost": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"configuredHost"
+			],
+			"title": "NestedSettings"
+		}
+	}
+}
