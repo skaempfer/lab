@@ -1,0 +1,22 @@
+meta {
+  name: Add Person
+  type: http
+  seq: 2
+}
+
+post {
+  url: https://localhost:54697/people
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "age": 30,
+    "name": "John"
+  }
+}
+
+settings {
+  encodeUrl: true
+}
